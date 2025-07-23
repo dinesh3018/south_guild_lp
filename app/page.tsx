@@ -1,6 +1,9 @@
 import BackGroundImage from "../app/image.png";
 import ClientLogo1 from "../app/Client_logo.png";
 import Image from "next/image";
+import ProjectSteps from "./components/ProjectSteps";
+import Footer from "./components/Footer";
+// import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
@@ -124,99 +127,13 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Process Section */}
-      <div className="w-full bg-mintcream flex flex-col items-start justify-start px-4 md:px-8 lg:px-12 py-8 md:py-12 lg:py-16 gap-8 md:gap-12">
-        <div className="w-full flex flex-col lg:flex-row items-start justify-start gap-6 lg:gap-12">
-          <div className="flex-1 flex flex-col items-start justify-start gap-6 md:gap-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight leading-tight">
-              <span className="block">We Integrate.</span>
-              <span className="block">We Innovate.</span>
-              <span className="block">We Improve.</span>
-            </h2>
-            <div className="text-base md:text-lg lg:text-xl leading-relaxed font-switzer-variable opacity-60 max-w-2xl">
-              <p className="mb-4">
-                Building the next generation of enterprise intelligence systems.
-                Young, fearless, and ready to redefine what&apos;s possible.
-              </p>
-              <p>
-                We work with diverse industries from sales and manufacturing, to
-                medical, auditing and more.
-              </p>
-            </div>
-          </div>
-          <div className="flex-1 relative bg-white h-64 md:h-80 lg:h-96 overflow-hidden">
-            <div className="absolute top-0 right-0 bg-mintcream w-4 h-full transform rotate-90 origin-top-right opacity-50" />
-          </div>
-        </div>
+      <ProjectSteps />
 
-        {/* Process Steps */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {[
-            {
-              number: "01",
-              title: "Discover",
-              description:
-                "We partner closely with your team to deeply understand challenges",
-            },
-            {
-              number: "02",
-              title: "Design",
-              description:
-                "We build products that are intuitive and closely aligned with your needs",
-            },
-            {
-              number: "03",
-              title: "Develop",
-              description:
-                "We engineer robust systems for seamless integration and peak performance",
-            },
-            {
-              number: "04",
-              title: "Deploy",
-              description:
-                "We manage deployments for you or work with you to integrate in your pipeline",
-            },
-          ].map((step, index) => (
-            <div
-              key={index}
-              className="bg-white overflow-hidden flex flex-col items-start justify-between p-4 md:p-6 relative gap-4 h-48 md:h-56 lg:h-64"
-            >
-              <div className="flex flex-col items-start justify-start gap-2">
-                <div className="text-sm md:text-base leading-relaxed opacity-60 font-switzer-variable">
-                  {step.number}
-                </div>
-                <h3 className="text-xl md:text-2xl lg:text-3xl tracking-tight leading-relaxed">
-                  {step.title}
-                </h3>
-              </div>
-              <p className="text-sm md:text-base leading-relaxed opacity-60 font-switzer-variable">
-                {step.description}
-              </p>
-              <div className="w-20 absolute top-0 right-0 bg-mintcream h-2" />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Testimonial Section */}
-      <div className="w-full flex flex-col lg:flex-row items-center justify-center py-8 md:py-12 lg:py-16 px-4 md:px-8 lg:px-12 gap-6 lg:gap-12">
-        <div className="w-full lg:w-1/3 relative overflow-hidden bg-gray-100 h-48 md:h-64 lg:h-80">
-          <div className="absolute bottom-0 left-0 bg-white w-12 h-4" />
-        </div>
-        <div className="flex-1 flex flex-col items-start justify-start gap-6 md:gap-8">
-          <blockquote className="text-xl md:text-2xl lg:text-3xl tracking-tight leading-relaxed">
-            &ldquo;Southern Guild has brought an incredible blend of engineering
-            depth and product vision to our AI initiative.&rdquo;
-          </blockquote>
-          <div className="text-sm md:text-base leading-relaxed font-switzer-variable opacity-60">
-            <p className="font-medium text-black/80">Krishna Seshadri</p>
-            <p>Head of Digital Transformation, Pidilite Industries</p>
-          </div>
-        </div>
-      </div>
+      {/* <Testimonials /> */}
 
       {/* CTA Section */}
-      <div className="w-full flex flex-col items-start justify-start font-switzer-variable">
+      <div className="relative bg-lightgreen w-full flex flex-col items-start justify-start font-switzer-variable">
+        {" "}
         <div className="w-full bg-lightgreen overflow-hidden flex flex-col sm:flex-row items-start sm:items-end justify-between px-4 md:px-8 lg:px-12 py-8 md:py-12 relative gap-6 sm:gap-4">
           <div className="text-lg md:text-xl lg:text-2xl leading-relaxed max-w-md">
             <span className="block">Ready for a holistic tech team</span>
@@ -234,59 +151,10 @@ export default function Home() {
               className="w-5 h-5 md:w-6 md:h-6"
             />
           </div>
-          <div className="w-48 absolute top-2 right-0 bg-white h-2 transform rotate-180 hidden lg:block" />
+          <div className="w-24 md:w-48 lg:w-48 absolute top-0 right-0 bg-mintcream h-2 transform rotate-180" />{" "}
         </div>
-
         {/* Footer */}
-        <div className="w-full bg-mintcream overflow-hidden flex flex-col items-start justify-start px-4 md:px-8 lg:px-12 py-8 md:py-12 lg:py-16 relative gap-12 md:gap-16">
-          <div className="w-full flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12">
-            {/* Logo and Brand */}
-            <div className="flex flex-row items-center justify-start gap-4 md:gap-6">
-              <Image
-                src="/logo.svg"
-                alt="Logo"
-                width={40}
-                height={40}
-                className="md:w-[50px] md:h-[50px]"
-              />{" "}
-              <div className="text-xl md:text-2xl lg:text-3xl tracking-tight leading-relaxed">
-                Southern Guild
-              </div>
-            </div>
-
-            {/* Footer Links */}
-            <div className="w-full lg:max-w-2xl grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 text-sm md:text-base font-switzer-variable">
-              <div className="flex flex-col items-start justify-start gap-3">
-                <div className="leading-relaxed opacity-60">Case studies</div>
-                <div className="leading-relaxed hover:opacity-80 cursor-pointer">
-                  Pidilite
-                </div>
-              </div>
-              <div className="flex flex-col items-start justify-start gap-3">
-                <div className="leading-relaxed opacity-60">Contact</div>
-                <div className="leading-relaxed hover:opacity-80 cursor-pointer">
-                  arun@southguild.tech
-                </div>
-                <div className="leading-relaxed hover:opacity-80 cursor-pointer">
-                  LinkedIn
-                </div>
-              </div>
-              <div className="flex flex-col items-start justify-start gap-3">
-                <div className="leading-relaxed opacity-60">Location</div>
-                <div className="leading-relaxed max-w-xs">
-                  <span className="block">v15 Renga&apos;s Triyambhava</span>
-                  <span className="block">Kalapatti Main Road</span>
-                  <span className="block">Coimbatore 641014</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Copyright */}
-          <div className="text-sm md:text-base leading-relaxed font-switzer-variable opacity-80">
-            © 2025 Southern Guild Technologies Pvt. Ltd.
-          </div>
-        </div>
+        <Footer />
       </div>
     </div>
   );
