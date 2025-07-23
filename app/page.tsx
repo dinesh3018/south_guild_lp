@@ -19,15 +19,13 @@ export default function Home() {
             Southern Guild
           </div>
         </div>
-        <div className="ml-auto">
-          <div className="bg-black text-white px-3 py-2 md:px-6 md:py-3 text-xs md:text-sm lg:text-base font-medium font-switzer-variable hover:bg-gray-800 transition-colors cursor-pointer rounded">
-            Get in touch
-          </div>
+        <div className="bg-black text-white px-3 py-2 md:px-6 md:py-3 text-xs md:text-sm lg:text-base font-medium font-switzer-variable hover:bg-gray-800 transition-colors cursor-pointer">
+          Get in touch
         </div>
       </div>
 
-      <div className="w-full relative bg-white overflow-hidden flex flex-col items-start justify-start">
-        <div className="w-full relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px]">
+      <div className="w-full relative bg-white overflow-hidden flex flex-col items-start justify-start mb-20">
+        <div className="w-full relative h-[500px] sm:h-[600px] md:h-[650px] lg:h-[700px] xl:h-[800px] 2xl:h-[850px]">
           <div className="absolute inset-0 w-full h-full">
             <div className="relative w-full h-full">
               <Image
@@ -37,35 +35,34 @@ export default function Home() {
                 className="object-cover"
                 priority
               />
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" /> */}
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 flex flex-col lg:flex-row items-start lg:items-end justify-between px-4 md:px-8 lg:px-12 py-6 md:py-8 lg:py-12 gap-6 lg:gap-8">
-            {/* Main Hero Text */}
-            <div className="flex-1 max-w-none lg:max-w-3xl flex flex-col items-start justify-start gap-4 md:gap-6">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-tight leading-tight md:leading-tight">
+          <div className="hidden sm:block bg-white h-10 md:h-12 lg:h-14 w-2/5 md:w-1/2 z-5 absolute bottom-56 md:bottom-64 lg:bottom-[14rem] xl:bottom-[16rem]"></div>
+
+          <div className="absolute -bottom-6  sm:-bottom-8 md:-bottom-10 left-0 bg-white right-0 flex flex-col lg:flex-row items-start lg:items-end justify-between px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-4 sm:py-6 md:py-8 lg:py-12 gap-4 sm:gap-6 lg:gap-8">
+            <div className="flex-1 max-w-none lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl flex flex-col items-start justify-start gap-3 sm:gap-4 md:gap-6">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl tracking-tight leading-tight font-bold">
                 <span className="block">Your own tech team,</span>
                 <span className="block">without the Hiring Hassle</span>
               </h1>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed font-switzer-variable opacity-70 max-w-2xl">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-switzer-variable opacity-70 max-w-xl lg:max-w-2xl">
                 We partner with companies as an embedded tech team, delivering
                 solutions that solve complex problems and drive scalable growth.
               </p>
             </div>
 
-            {/* Trusted By Section */}
-            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-start sm:items-center lg:items-start xl:items-center justify-start gap-3 sm:gap-4 text-sm md:text-base font-switzer-variable mt-4 lg:mt-0">
-              <div className="text-black/70">Trusted by</div>
-              <div className="flex items-center gap-3">
-                <div className="w-20 md:w-24 lg:w-28 p-2">
+            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-start sm:items-center lg:items-start xl:items-center justify-start gap-2 sm:gap-3 lg:gap-4 text-xs sm:text-sm md:text-base font-switzer-variable mt-2 sm:mt-4 lg:mt-0 flex-shrink-0">
+              <div className="text-black/70 whitespace-nowrap">Trusted by</div>
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-16 sm:w-18 md:w-20 lg:w-24 xl:w-28 p-1 sm:p-2 flex-shrink-0">
                   <Image
                     src={ClientLogo1}
                     alt="Client Logo"
-                    className="w-full h-auto"
+                    className="w-full h-auto p-2"
                   />
                 </div>
-                <div className="flex flex-col items-start justify-center text-xs md:text-sm text-orange-600 font-ibm-plex-sans-condensed font-bold tracking-tight leading-tight uppercase">
+                <div className="flex flex-col items-start justify-center text-xs sm:text-sm md:text-base text-orange-600 font-ibm-plex-sans-condensed font-bold tracking-tight leading-tight uppercase">
                   <span>Path</span>
                   <span>Assist</span>
                 </div>
@@ -76,13 +73,13 @@ export default function Home() {
       </div>
 
       {/* Case Study Section */}
-      <div className="w-full bg-mintcream overflow-hidden flex flex-col items-start justify-start px-4 md:px-8 lg:px-12 py-8 md:py-12 lg:py-16 relative gap-2">
-        <h2 className="text-xl md:text-2xl lg:text-3xl tracking-tight leading-relaxed max-w-2xl">
+      <div className="w-full  bg-mintcream overflow-hidden flex flex-col items-start justify-start px-4 md:px-8 lg:px-12 py-8 md:py-12 lg:py-16 relative gap-2">
+        {/* <h2 className="text-xl md:text-2xl lg:text-3xl tracking-tight leading-relaxed max-w-2xl">
           How we enabled AI operations across Pidilite i
         </h2>
         <div className="text-sm md:text-base leading-relaxed font-switzer-variable opacity-80">
           Case study
-        </div>
+        </div> */}
       </div>
 
       {/* Main Value Proposition */}
@@ -245,19 +242,13 @@ export default function Home() {
           <div className="w-full flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12">
             {/* Logo and Brand */}
             <div className="flex flex-row items-center justify-start gap-4 md:gap-6">
-              <svg
-                width="32"
-                height="28"
-                viewBox="0 0 32 28"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-5 md:w-8 md:h-7"
-              >
-                <path
-                  d="M31.7069 16.0273V11.2776C31.7069 11.2776 18.1404 14.5356 15.8535 22.4818C12.9464 14.148 0 11.2779 0 11.2779V16.0273C7.76474 17.1306 13.881 22.5647 15.4571 28H16.2498C17.826 22.5647 23.9422 17.1306 31.7069 16.0273Z"
-                  fill="black"
-                />
-              </svg>
+              <Image
+                src="/logo.svg"
+                alt="Logo"
+                width={40}
+                height={40}
+                className="md:w-[50px] md:h-[50px]"
+              />{" "}
               <div className="text-xl md:text-2xl lg:text-3xl tracking-tight leading-relaxed">
                 Southern Guild
               </div>
